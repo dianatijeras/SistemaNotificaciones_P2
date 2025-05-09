@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public class Email implements NotificacionStrategy{
     private String asunto, mensaje;
     @Override

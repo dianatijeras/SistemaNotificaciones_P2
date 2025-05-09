@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public abstract class Usuario {
     private String nombre, email, telefono, id;
     protected boolean activo;

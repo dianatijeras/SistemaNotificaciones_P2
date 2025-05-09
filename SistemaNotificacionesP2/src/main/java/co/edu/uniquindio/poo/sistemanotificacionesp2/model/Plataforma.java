@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;

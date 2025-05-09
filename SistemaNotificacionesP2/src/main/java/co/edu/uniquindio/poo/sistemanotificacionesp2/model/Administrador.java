@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public class Administrador extends Usuario{
 
     public Administrador(String nombre, String email, String telefono, String id) {

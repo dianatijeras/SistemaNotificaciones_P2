@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public class Notificacion {
 
     private Usuario usuario;

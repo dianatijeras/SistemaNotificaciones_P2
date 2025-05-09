@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public class SMS implements NotificacionStrategy{
     private String telefonoDestinatario, mensaje;
 

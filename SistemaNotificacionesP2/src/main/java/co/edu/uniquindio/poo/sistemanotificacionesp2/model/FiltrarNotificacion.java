@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
+
 public class FiltrarNotificacion {
 
     protected FiltrarNotificacion next;
