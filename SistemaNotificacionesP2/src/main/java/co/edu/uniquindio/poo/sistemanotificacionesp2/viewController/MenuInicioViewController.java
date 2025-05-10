@@ -35,7 +35,6 @@ public class MenuInicioViewController {
 
 
 
-
     @FXML
     void onClick_EnviarMensaje(ActionEvent event) {
         String canal = ComboBox_CanalNotificacion.getValue();
