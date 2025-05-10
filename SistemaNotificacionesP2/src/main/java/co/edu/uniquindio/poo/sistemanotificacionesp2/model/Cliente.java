@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
 
 public class Cliente extends Usuario{
 
-    public Cliente(String nombre, String email, String telefono, String id, boolean blocked) {
+    public Cliente(String nombre, String email, String telefono, String id) {
         super(nombre, email, telefono, id);
     }
 

@@ -7,5 +7,5 @@ public class Email implements NotificacionStrategy{
         System.out.println("Email enviado a " + user.getEmail());
         System.out.println("Contenido:\n" + message);
     }
-
 }
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.sistemanotificacionesp2.viewController.MenuInicioViewController">
+   <children>
+      <ComboBox fx:id="ComboBox_CanalNotificacion" layoutX="95.0" layoutY="91.0" prefWidth="150.0" promptText="Canal Notificacion" style="-fx-background-color: #afcdea;" />
+      <TextArea fx:id="TextArea_Mensaje" layoutX="95.0" layoutY="171.0" prefHeight="200.0" prefWidth="447.0" promptText="Mensaje" />
+      <Label layoutX="154.0" layoutY="35.0" text="Bienvenido al Sistema de Notificaciones !!">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="Button_Enviar" layoutX="279.0" layoutY="389.0" mnemonicParsing="false" onAction="#onClick_EnviarMensaje" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #afcdea; -fx-background-radius: 8;" text="Enviar" />
+      <TextField fx:id="TextField_CorreoDestino" layoutX="95.0" layoutY="133.0" prefHeight="25.0" prefWidth="447.0" promptText="Para" />
+   </children>
+</Pane>
