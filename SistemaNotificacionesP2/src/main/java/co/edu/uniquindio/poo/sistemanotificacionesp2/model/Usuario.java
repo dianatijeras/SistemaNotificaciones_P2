@@ -9,7 +9,7 @@ public abstract class Usuario {
         this.email = email;
         this.telefono = telefono;
         this.id = id;
-        this.activo = false;
+        this.activo = true;
     }
 
     public String getNombre() {
@@ -53,14 +53,14 @@ public abstract class Usuario {
     }
 
     public final String formatMessage(String mensaje) {
-        return getHeader() + "\n" + personalizeMessage(mensaje) + "\n" + getFooter();
+        return getHeader() + "\n" + personalizeMessage(mensaje) + "\n" + getFooter(mensaje);
     }
 
     protected abstract String getHeader();
 
     protected abstract String personalizeMessage(String message);
 
-    protected abstract String getFooter();
+    protected abstract String getFooter(String mensaje);
 
 }
 

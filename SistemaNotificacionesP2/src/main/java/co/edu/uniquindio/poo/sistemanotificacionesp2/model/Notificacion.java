@@ -5,6 +5,8 @@ public class Notificacion {
     private Usuario usuario;
     private String mensaje;
     private NotificacionStrategy strategy;
+    private FiltrarMensajeVacio mensajeVacio;
+    private FiltrarUsuarioBloqueado usuarioBloqueado;
 
     public Notificacion(Usuario usuario, String mensaje) {
         this.usuario = usuario;
@@ -35,8 +37,11 @@ public class Notificacion {
         this.strategy = strategy;
     }
 
+
+
     public void enviar(){
         String formato = usuario.formatMessage(mensaje);
-        strategy.enviar(usuario, formato);
+        strategy.enviar(usuario);
     }
+
 }

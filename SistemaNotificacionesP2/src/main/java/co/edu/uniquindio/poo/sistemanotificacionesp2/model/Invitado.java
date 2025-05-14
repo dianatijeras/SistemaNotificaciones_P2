@@ -15,8 +15,8 @@ public class Invitado extends Usuario{
         return message;
     }
 
-    protected String getFooter() {
-        return "Gracias por usar la aplicación.";
+    protected String getFooter(String mensaje) {
+        return mensaje+ "\n Gracias por usar la aplicación.";
     }
 
 

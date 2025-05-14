@@ -14,7 +14,7 @@ public class Administrador extends Usuario{
         return mensaje;
     }
 
-    protected String getFooter (){
-        return "Gracias por usar la aplicacion";
+    protected String getFooter (String mensaje){
+        return mensaje + "\n Gracias por usar la aplicacion";
     }
 }
