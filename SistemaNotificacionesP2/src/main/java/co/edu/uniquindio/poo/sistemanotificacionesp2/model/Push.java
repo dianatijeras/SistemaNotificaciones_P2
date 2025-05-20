@@ -7,10 +7,9 @@ public class Push implements NotificacionStrategy{
     }
 
     @Override
-    public void enviar(Usuario user) {
+    public void enviar(String mensaje, Usuario user) {
         System.out.println("🔔 Push enviado a " + user.getEmail());
         System.out.println("Contenido:\n" + mensaje);
     }
-
 }
 

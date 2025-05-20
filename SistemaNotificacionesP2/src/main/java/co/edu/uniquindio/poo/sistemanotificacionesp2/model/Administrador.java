@@ -6,14 +6,17 @@ public class Administrador extends Usuario{
         super(nombre, email, telefono, id);
     }
 
+    @Override
     protected String getHeader(){
-        return "Administrador, ";
+        return "Hola Administrador, " + getNombre() + ",\n";
     }
 
+    @Override
     protected String  personalizeMessage(String mensaje){
         return mensaje;
     }
 
+    @Override
     protected String getFooter (String mensaje){
         return mensaje + "\n Gracias por usar la aplicacion";
     }

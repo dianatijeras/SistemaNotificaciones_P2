@@ -10,4 +10,6 @@ public class FiltrarUsuarioBloqueado extends FiltrarNotificacion{
         return super.manejo(notificacion);
     }
 
+
+
 }

@@ -9,10 +9,12 @@ import java.util.List;
 public class Plataforma {
     private String nombre;
     private List<Usuario> usuarios;
+    private List<Notificador> notificaciones;
 
     public Plataforma(String nombre, String... operations) {
         this.nombre = nombre;
         this.usuarios = new LinkedList<>();
+        this.notificaciones = new LinkedList<>();
     }
 
     public void subscribe(Usuario usuario) {
@@ -49,6 +51,16 @@ public class Plataforma {
              System.err.println("Usuario no encontrado");
          }
         return usu;
+    }
+
+    public void notificarObservadores(String evento){
+        for (Notificador n : notificaciones){
+            n.update(evento);
+        }
+    }
+
+    public void eventoOcurrio(String evento){
+        notificarObservadores(evento);
     }
 
     public String getNombre() {

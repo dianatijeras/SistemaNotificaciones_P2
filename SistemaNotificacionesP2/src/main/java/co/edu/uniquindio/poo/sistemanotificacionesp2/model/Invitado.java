@@ -6,17 +6,19 @@ public class Invitado extends Usuario{
         super(nombre, email, telefono, id);
     }
 
-
+    @Override
     protected String getHeader() {
-        return "Hola Invitado, ";
+        return "Hola Invitado, " + getNombre() + ",\n";
     }
 
+    @Override
     protected String personalizeMessage(String message) {
         return message;
     }
 
+    @Override
     protected String getFooter(String mensaje) {
-        return mensaje+ "\n Gracias por usar la aplicación.";
+        return mensaje + "\n Gracias por usar la aplicación.";
     }
 
 

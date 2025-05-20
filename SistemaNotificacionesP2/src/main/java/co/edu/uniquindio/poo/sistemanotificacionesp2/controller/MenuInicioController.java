@@ -20,13 +20,13 @@ public class MenuInicioController {
 
         switch (canal) {
             case "Email":
-                notificacion.setStrategy(new Email());
+                notificacion.setStrategy(new Email(mensaje));
                 break;
             case "SMS":
-                notificacion.setStrategy(new SMS());
+                notificacion.setStrategy(new SMS(mensaje));
                 break;
             case "Push":
-                notificacion.setStrategy(new Push());
+                notificacion.setStrategy(new Push(mensaje));
                 break;
             default:
                 throw new IllegalArgumentException("Canal de notificación no válido: " + canal);

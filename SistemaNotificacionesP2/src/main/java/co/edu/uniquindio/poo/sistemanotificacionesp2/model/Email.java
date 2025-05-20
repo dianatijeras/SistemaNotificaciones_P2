@@ -9,7 +9,7 @@ public class Email implements NotificacionStrategy{
     }
 
     @Override
-    public void enviar(Usuario user) {
+    public void enviar(String mensaje, Usuario user) {
         System.out.println("Email enviado a " + user.getEmail());
         System.out.println("Contenido:\n" + mensaje);
     }

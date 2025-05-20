@@ -40,8 +40,11 @@ public class Notificacion {
 
 
     public void enviar(){
-        String formato = usuario.formatMessage(mensaje);
-        strategy.enviar(usuario);
+        if(strategy == null){
+            throw new IllegalStateException("Estrategia no asignada");
+        }
+        String mensajeFormateado = usuario.formatMessage(mensaje);
+        strategy.enviar(mensajeFormateado, usuario);
     }
 
 }

@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.sistemanotificacionesp2.model;
 
-public abstract class Usuario {
+public abstract class Usuario implements Notificador{
+
     private String nombre, email, telefono, id;
     protected boolean activo;
 
@@ -53,8 +54,13 @@ public abstract class Usuario {
     }
 
     public final String formatMessage(String mensaje) {
-        return getHeader() + "\n" + personalizeMessage(mensaje) + "\n" + getFooter(mensaje);
+        StringBuilder sb = new StringBuilder();
+        sb.append(getHeader());
+        sb.append(personalizeMessage(mensaje));
+        sb.append(getFooter(mensaje));
+        return sb.toString();
     }
+
 
     protected abstract String getHeader();
 
@@ -62,10 +68,10 @@ public abstract class Usuario {
 
     protected abstract String getFooter(String mensaje);
 
+
+    @Override
+    public void update(String evento){
+        System.out.println(nombre + "recibe notificacion: " + evento);
+
+    }
 }
-
-
-
-
-
-

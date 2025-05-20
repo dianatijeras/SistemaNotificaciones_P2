@@ -8,7 +8,7 @@ public class SMS implements NotificacionStrategy{
     }
 
     @Override
-    public void enviar(Usuario user) {
+    public void enviar(String mensaje, Usuario user) {
         System.out.println("SMS enviado a " + user.getEmail());
         System.out.println("Contenido:\n" + mensaje);
     }
