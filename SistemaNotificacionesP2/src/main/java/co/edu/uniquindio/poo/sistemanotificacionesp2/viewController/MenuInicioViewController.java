@@ -40,10 +40,19 @@ public class MenuInicioViewController {
         String canal = ComboBox_CanalNotificacion.getValue();
         String correoDestino = TextField_CorreoDestino.getText();
         String mensaje = TextArea_Mensaje.getText();
+        if(canal == null){
+            mostrarAlerta("Error", "El canal no puede estar vacio");
+        } else if (correoDestino == null) {
+            mostrarAlerta("Error", "El correo no puede estar vacio");
+        }else if (mensaje == null) {
+            mostrarAlerta("Error", "El mensaje no puede estar vacio");
+        }
+        else{
+            menuInicioController.enviarMensaje(mensaje,canal,correoDestino);
+            mostrarAlerta("Éxito", "Notificación enviada correctamente.");
+            limpiarCampos();
+        }
 
-        menuInicioController.enviarMensaje(mensaje,canal,correoDestino);
-        mostrarAlerta("Éxito", "Notificación enviada correctamente.");
-        limpiarCampos();
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {
