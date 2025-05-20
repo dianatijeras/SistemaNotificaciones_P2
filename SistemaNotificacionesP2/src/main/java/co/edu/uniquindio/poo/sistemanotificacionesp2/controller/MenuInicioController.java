@@ -16,7 +16,7 @@ public class MenuInicioController {
             throw new IllegalArgumentException("mensaje, canal o email no pueden ser nulos.");
         }
         Usuario u = plataforma.buscarUsuario(email);
-        Notificacion notificacion = new Notificacion(u, email);
+        Notificacion notificacion = new Notificacion(u, mensaje);
 
         switch (canal) {
             case "Email":

@@ -18,6 +18,6 @@ public class Administrador extends Usuario{
 
     @Override
     protected String getFooter (String mensaje){
-        return mensaje + "\n Gracias por usar la aplicacion";
+        return "\n Gracias por usar la aplicacion";
     }
 }

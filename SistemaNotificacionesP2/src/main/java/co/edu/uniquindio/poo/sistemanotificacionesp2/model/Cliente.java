@@ -18,7 +18,7 @@ public class Cliente extends Usuario {
 
     @Override
     protected String getFooter(String mensaje) {
-        return mensaje + "\n Gracias por usar la aplicación.";
+        return  "\n Gracias por usar la aplicación.";
     }
 
 
