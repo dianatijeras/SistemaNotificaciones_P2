@@ -9,6 +9,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+/**
+ * Controlador de la vista principal del sistema de notificaciones
+ */
 public class MenuInicioViewController {
     private Plataforma plataforma = new Plataforma("Sistema Notificaciones");
     private MenuInicioController menuInicioController = new MenuInicioController(plataforma);
@@ -34,7 +37,11 @@ public class MenuInicioViewController {
     private Notificacion notificacion;
 
 
-
+    /**
+     * Evento asociado al botón enviar
+     * Valida los campos y llama al controlador para enviar el mensaje
+     * @param event
+     */
     @FXML
     void onClick_EnviarMensaje(ActionEvent event) {
         String canal = ComboBox_CanalNotificacion.getValue();
@@ -55,6 +62,11 @@ public class MenuInicioViewController {
 
     }
 
+    /**
+     * Muestra una alerta informativa con título y mensaje
+     * @param titulo
+     * @param mensaje
+     */
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
@@ -63,12 +75,18 @@ public class MenuInicioViewController {
         alert.showAndWait();
     }
 
+    /**
+     * Limpia los campos del formulario
+     */
     private void limpiarCampos() {
         ComboBox_CanalNotificacion.setValue(null);
         TextField_CorreoDestino.clear();
         TextArea_Mensaje.clear();
     }
 
+    /**
+     * Inicializa usuarios de ejemplo y los registra en la plataforma
+     */
     private void inicializarUsuarios(){
 
         Usuario administrador = new Administrador("Maria", "mariaG.1@gmail.com", "31467894", "42628237464");
@@ -93,6 +111,11 @@ public class MenuInicioViewController {
 
     }
 
+    /**
+     * Método que se ejecuta automáticamente al cargar la vista.
+     * Verifica la correcta inyección de los componentes FXML,
+     * inicializa usuarios y carga las opciones del ComboBox
+     */
     @FXML
     void initialize() {
         assert Button_Enviar != null : "fx:id=\"Button_Enviar\" was not injected: check your FXML file 'menuInicio.fxml'.";
